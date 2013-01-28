@@ -1,5 +1,5 @@
 Newsletter::Application.routes.draw do
-  resources :posts, :only => [:index, :create] do
+  resources :posts, :only => [:index, :create, :show] do
     get :week,    :on => :collection
     get :archive, :on => :member
   end

@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.(id)
+    @post = Post.show(params[:id])
   end
 
   def create

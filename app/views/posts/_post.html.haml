@@ -11,6 +11,6 @@
   .span9.offset1.right-column
     .row
       %h1.title.media-heading
-        = post.title
+        = link_to post.title, post_path(post)
       .content
         = sanitize post.body
