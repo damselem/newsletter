@@ -1,0 +1,9 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      = link_to root_path do
+        = image_tag 'klarna_white_logo.png', :class => 'brand'
+      %ul.nav
+        %li= link_to 'This Week', week_posts_path, :class => 'pull-left'
+        %li= link_to 'Archive', posts_path, :class => 'pull-left'
+        %li= link_to 'Authors', users_path, :class => 'pull-left'

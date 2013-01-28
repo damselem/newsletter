@@ -1,0 +1,64 @@
+{
+  "ServerToken": "",
+  "From": "daniel.amselem@klarna.com",
+  "FromFull": {
+    "Email": "daniel.amselem@klarna.com",
+    "Name": "Daniel Salmeron Amselem"
+  },
+  "To": "de6dd2036080a708eb431761793792ea@inbound.postmarkapp.com",
+  "ToFull": [
+    {
+      "Email": "de6dd2036080a708eb431761793792ea@inbound.postmarkapp.com",
+      "Name": ""
+    }
+  ],
+  "Cc": "",
+  "CcFull": [],
+  "ReplyTo": "",
+  "Subject": "JSLint",
+  "MessageID": "3b051d41-bf2c-4866-a88e-376af81e5bde",
+  "Date": "Sun, 25 Nov 2012 16:43:55 +0200",
+  "MailboxHash": "",
+  "TextBody": "A Lint is a tool used to detect missing or wrong usage of the\nlanguage's constructs and most programming languages have an\nimplementation of it. It is very interesting when used in conjunction\nwith your text editor, i.e. you can make the lint to run whenever you\nsave a file.\n\nHere two examples of JSLint:\n\n - [VIM](https:\/\/github.com\/sleistner\/vim-jshint)\n - [SublimeText2](https:\/\/github.com\/fbzhong\/sublime-jslint)",
+  "HtmlBody": "",
+  "Tag": "",
+  "Headers": [
+    {
+      "Name": "X-Spam-Checker-Version",
+      "Value": "SpamAssassin 3.3.1 (2010-03-16) onrs-iad-pm-inbound1.wildbit.com"
+    },
+    {
+      "Name": "X-Spam-Status",
+      "Value": "No"
+    },
+    {
+      "Name": "X-Spam-Score",
+      "Value": "-0.7"
+    },
+    {
+      "Name": "X-Spam-Tests",
+      "Value": "RCVD_IN_DNSWL_LOW,SPF_PASS"
+    },
+    {
+      "Name": "Received-SPF",
+      "Value": "Pass (sender SPF authorized) identity=mailfrom; client-ip=209.85.216.180; helo=mail-qc0-f180.google.com; envelope-from=daniel.amselem@klarna.com; receiver=de6dd2036080a708eb431761793792ea@inbound.postmarkapp.com"
+    },
+    {
+      "Name": "X-Google-DKIM-Signature",
+      "Value": "v=1; a=rsa-sha256; c=relaxed\/relaxed;        d=google.com; s=20120113;        h=mime-version:date:message-id:subject:from:to:content-type         :x-gm-message-state;        bh=ztKcZ93DumHXsgab2RNX137r6MD84ZdWTisHaeRK9ek=;        b=W5pXLw0Bk2uuG\/7sK8BKQCd7LNofB5K+7EOnEEOVaLzK7OcTSdnQV1ru4zHTPGnQz0         JfdgXjHjwAz1s\/yGaFk0gl87B6NsLUMHotulDXFzFn2F03fe93k0yZqIru+\/ZmybaUlm         eJIdMM6PgASwJ+xVHkgZbOUC7qHh95VOaJ9KtqAFH\/sRODJIUjkYQ88WfYn411+uIOxi         TIjvbJmQZluzbDV5CgiFALT5wlSq5k\/qaEfHqGx63VVDgE1XsFHpgvm4LEGUzk+VSEX0         TvcWFUOEhNzjUldgtTmYs+Tn0k1\/kDor+PHUhkYHEPCwJPzuNTNc7a4yjfYwLLA9Qlaa         QfmA=="
+    },
+    {
+      "Name": "MIME-Version",
+      "Value": "1.0"
+    },
+    {
+      "Name": "Message-ID",
+      "Value": "<CADenHvMK64rVHTiX=UC6MQ_767NBVt4htTJJiu8mFjasdpppNA@mail.gmail.com>"
+    },
+    {
+      "Name": "X-Gm-Message-State",
+      "Value": "ALoCoQkEawNf5f4ry4hkOxMuyFNEBLxNkgrUtplr41ZxSTs7wcU+EVh3hNKVE7fd3jdM+bnCbyba"
+    }
+  ],
+  "Attachments": []
+}

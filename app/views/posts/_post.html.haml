@@ -1,0 +1,16 @@
+.row.box
+  .span1.left-column
+    .row
+      = link_to user_path(post.user), :class => '', :title => post.user.full_name do
+        = image_tag post.user.gravatar_image_url, :class => 'img-polaroid media-object'
+
+      %p= post.created_at.to_date.to_formatted_s(:rfc822)
+
+      = link_to 'Delete', archive_post_path(post), :class => 'btn btn-warning btn-block', :confirm => 'Are you sure?' if post.user == current_user
+
+  .span9.offset1.right-column
+    .row
+      %h1.title.media-heading
+        = post.title
+      .content
+        = sanitize post.body

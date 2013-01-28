@@ -1,0 +1,17 @@
+RAILS_SECRET_TOKEN:
+
+GOOGLE_OAUTH_TOKEN_URL: https://www.googleapis.com/oauth2/v1/tokeninfo
+GOOGLE_OAUTH_KEY:
+GOOGLE_OAUTH_SECRET:
+
+NEWSLETTER_FROM_EMAIL: #From which email address you want to send
+
+GMAIL_USERNAME: #GMail username from which you want to send the emails.
+GMAIL_PASSWORD: #GMail password
+
+production:
+  GOOGLE_OAUTH_KEY:
+  GOOGLE_OAUTH_SECRET:
+
+development:
+  NEWSLETTER_FROM_EMAIL:

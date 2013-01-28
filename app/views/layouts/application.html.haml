@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Newsletter | Klarna
+    = stylesheet_link_tag    'application', :media => 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+    = favicon_link_tag
+  %body
+    #header
+      = render :partial => 'shared/header'
+    #content.container
+      = yield
+
+    :javascript
+      $(document).ready(function () {
+        newsletter.init();
+      });

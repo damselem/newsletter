@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => 'email.css'}
+    %meta{:content => 'text/html; charset=UTF-8', :'http-equiv' => 'Content-Type'}
+  %body
+    %table#klarna-newsletter{:align => 'center'}
+      %tbody
+        %tr
+          %td
+            = image_tag 'klarna_white_logo.png'
+            - @posts.each do |post|
+              %div.wrapper
+                %div.header
+                  = post.title

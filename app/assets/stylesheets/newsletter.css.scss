@@ -1,0 +1,106 @@
+$lightBlue: #0089cf;
+$darkBlue : #0368aa;
+$gray: #f1f1f1;
+$darkGray: #555;
+
+body {
+  background-color: $gray;
+}
+
+#header {
+  font: {
+    family : 'Neo Sans Bold';
+    color  : white;
+  }
+
+  .navbar {
+    color: white;
+
+    .brand {
+      color       : white;
+      text-shadow : none;
+      font-size   : 45px;
+    }
+
+    .nav {
+      padding-top: 15px;
+
+      li {
+        a {
+          color       : white;
+          text-shadow : none;
+          font-size   : 25px;
+        }
+
+        &.active {
+          a {
+            color: $darkGray;
+          }
+        }
+      }
+    }
+
+    .navbar-inner {
+      min-height       : 70px;
+      background-image : -webkit-linear-gradient(top, $lightBlue, $darkBlue);
+      background-image : -moz-linear-gradient(top, $lightBlue, $darkBlue);
+      background-image : -ms-linear-gradient(top, $lightBlue, $darkBlue);
+      background-image : linear-gradient(top, $lightBlue, $darkBlue);
+    }
+  }
+
+}
+
+#content {
+  padding-top: 55px;
+
+  .alert {
+    margin-top: 30px;
+  }
+
+  .box {
+    &:first-child {
+      margin-top: 25px;
+    }
+
+    background: {
+      color: white;
+    }
+
+    margin-top: 25px;
+
+    box: {
+      shadow: 0 10px 15px 0 rgba(205, 205, 205, 0.3);
+    }
+
+    border: {
+      width : 1px;
+      style : solid;
+      color : #DDDDDD;
+    }
+
+    padding: 20px;
+
+    .title {
+      font: {
+        family : 'Neo Sans Bold';
+      }
+      margin-bottom: 15px;
+    }
+
+    .left-column {
+      .btn, p {
+        margin-top: 15px;
+      }
+
+      p {
+        font-family: 'Neo Sans Regular';
+      }
+    }
+  }
+
+  .pagination {
+    text-align: center;
+  }
+}
+

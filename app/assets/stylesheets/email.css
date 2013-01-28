@@ -1,0 +1,47 @@
+#klarna-newsletter {
+  border-spacing:0;
+  border-collapse:collapse;
+  width: 600px;
+}
+
+#klarna-newsletter tr {
+  background-color: #ffffff;
+}
+
+#klarna-newsletter td {
+  border: none;
+}
+
+#klarna-newsletter #title {
+  line-height      : 1.0em;
+  clear            : right;
+  font-weight      : bold;
+  color            : #c00;
+  margin-bottom    : 4px;
+  padding-top      : 4px;
+  border-top       : 2px solid #c00;
+  margin-top       : 1.5em;
+  font-size        : 18px;
+  color            : #999;
+  border-top-color : #999
+}
+
+#klarna-newsletter div.wrapper {
+  display     : block;
+  clear       : right;
+  margin      : 16px 16px;
+  line-height : 1.4em;
+  font-size   : 14px
+}
+
+#klarna-newsletter div.header {
+  font-weight   : bold;
+  font-size     : 15px;
+  display       : block;
+  margin-bottom : 3px
+}
+
+#klarna-newsletter div.body {
+  font-size   : 13px;
+  line-height : 19px
+}

@@ -1,0 +1,12 @@
+.box.media
+  = image_tag @user.gravatar_image_url, :class => 'img-polaroid media-object pull-left'
+
+  .media-body
+    %h1.media-heading
+      = @user.full_name
+
+    .content
+      %ul
+      - @user.posts.each do |post|
+        %li= link_to post.title, post_path(post)
+

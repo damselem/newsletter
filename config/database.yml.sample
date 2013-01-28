@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  host: localhost
+  username: damselem
+  database: klarna-newsletter-development
+
+test:
+  adapter: postgresql
+  host: localhost
+  username: damselem
+  database: klarna-newsletter-test
+
+production:
+  adapter: postgresql
+  host: localhost
+  username: damselem
+  database: klarna-newsletter-production
+

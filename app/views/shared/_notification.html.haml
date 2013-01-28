@@ -1,0 +1,7 @@
+- flash.each do |kind, message|
+  - if kind == 'alert'
+    .alert.alert-error
+      = message
+  - else
+    .alert.alert-info
+      = message

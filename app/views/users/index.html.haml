@@ -1,0 +1,4 @@
+.box.clearfix
+  - @users.each do |user|
+    = link_to user_path(user), :class => 'pull-left', :title => user.full_name do
+      = image_tag user.gravatar_image_url, :class => 'img-polaroid'
