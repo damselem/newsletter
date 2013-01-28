@@ -8,8 +8,8 @@
       %tbody
         %tr
           %td
-            = image_tag 'klarna_white_logo.png'
+            = image_tag 'klarna_blue_logo.png'
             - @posts.each do |post|
               %div.wrapper
                 %div.header
-                  = post.title
+                  = link_to post.title, post_path(post)
