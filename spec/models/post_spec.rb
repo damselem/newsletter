@@ -46,24 +46,6 @@ describe Post do
     end
   end
 
-  describe '.from_current_week' do
-    context 'given there are no posts for the current week' do
-      it 'returns no posts' do
-        expect(Post.from_current_week).to have(0).posts
-      end
-    end
-
-    context 'given there are 2 posts for the current week' do
-      before do
-        create_list(:post, 2)
-      end
-
-      it 'returns both posts' do
-        expect(Post.from_current_week).to have(2).posts
-      end
-    end
-  end
-
   describe '#archive' do
     context 'given a non-archived post' do
       let(:post) { create(:post, :archived => false) }

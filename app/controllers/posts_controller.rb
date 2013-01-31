@@ -5,10 +5,6 @@ class PostsController < ApplicationController
     @posts = Post.list(params[:page])
   end
 
-  def week
-    @posts = Post.from_current_week
-  end
-
   def show
     @post = Post.show(params[:id])
   end

@@ -1,6 +1,5 @@
 Newsletter::Application.routes.draw do
   resources :posts, :only => [:index, :create, :show] do
-    get :week,    :on => :collection
     get :archive, :on => :member
   end
 
@@ -9,5 +8,5 @@ Newsletter::Application.routes.draw do
   get 'auth/:provider/callback', :to => 'sessions#create'
   get 'login', :as => :login,    :to => 'sessions#new'
 
-  root :to => 'posts#week'
+  root :to => 'posts#index'
 end
