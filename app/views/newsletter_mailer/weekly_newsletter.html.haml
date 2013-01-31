@@ -12,6 +12,7 @@
             - @posts.each do |post|
               %div.wrapper
                 %div.header
-                  = link_to post.title, post_path(post)
+                  = link_to post.title, post_path(post, :only_path => false)
+                  by #{post.user.full_name}
                 %div
-                  = post.body
+                  = raw post.body
