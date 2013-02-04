@@ -14,6 +14,7 @@ gem 'omniauth-google-oauth2'
 gem 'typhoeus'
 gem 'figaro'
 gem 'roadie'
+gem 'honeybadger'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
