@@ -15,4 +15,4 @@
                   = link_to post.title, post_path(post, :only_path => false)
                   by #{post.user.full_name}
                 %div
-                  = raw post.body
+                  = sanitize post.body
