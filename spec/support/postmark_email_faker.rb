@@ -5,7 +5,7 @@ module PostmarkEmailFaker
     File.read(path)
   end
 
-  def fake_markdown_email(attributes = {})
+  def fake_markdown_email
     path = fake_email_path(:markdown_email)
 
     File.read(path)
