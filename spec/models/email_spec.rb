@@ -10,7 +10,8 @@ describe Email do
 
       context 'given the user already exists' do
         before do
-          create(:user)
+          email_address = email.instance_variable_get(:@postmark).from_email
+          @user = create(:user, :email => email_address)
         end
 
         it 'returns the existent user' do
