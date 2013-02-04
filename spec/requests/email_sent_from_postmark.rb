@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'POST /posts' do
+describe 'Email sent from Postmark' do
   include PostmarkEmailFaker
 
   context 'given Postmark sends an email as JSON' do
