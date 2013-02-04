@@ -15,6 +15,7 @@ gem 'typhoeus'
 gem 'figaro'
 gem 'roadie'
 gem 'honeybadger'
+gem 'librato-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
