@@ -1,13 +1,13 @@
 GOOGLE_OAUTH_TOKEN_URL: https://www.googleapis.com/oauth2/v1/tokeninfo
 
 production:
-  GOOGLE_OAUTH_KEY:
-  GOOGLE_OAUTH_SECRET:
+  GOOGLE_OAUTH_KEY: <Google API Access Key>
+  GOOGLE_OAUTH_SECRET: <Google API Access Secret>
   GMAIL_USERNAME: klarna.newsletter@gmail.com
-  GMAIL_PASSWORD: <password>
+  GMAIL_PASSWORD: <GMail password>
 
 development:
-  GOOGLE_OAUTH_KEY:
-  GOOGLE_OAUTH_SECRET:
-  GMAIL_USERNAME:
-  GMAIL_PASSWORD:
+  GOOGLE_OAUTH_KEY: <Google API Access Key>
+  GOOGLE_OAUTH_SECRET: <Google API Access Secret>
+  GMAIL_USERNAME: <GMail username for the account that will be used to send the newsletter>
+  GMAIL_PASSWORD: <GMail password for the account that will be used to send the newsletter>
