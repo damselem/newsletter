@@ -19,7 +19,7 @@ The application depends on two external resources, [Postmark](https://postmarkap
 - Click on **Settings** in the top menu and modify the **Inbound Hook** to something like:
 
         http://my-ip-address:3000/posts
-        
+
 ###### Fake integration
 
 If you don't want to do all the tedious work described above, you can simply generate fake emails by running:
@@ -33,12 +33,12 @@ If you don't want to do all the tedious work described above, you can simply gen
 - In the *Your site or hostname* section fill in the text field with `localhost:3000`.
 - Click on **Edit** on the new box that appears on the page and modify the following values:
   - Authorized Redirect URIs:
-  
+
         http://localhost:3000/auth/google_oauth2/callback
-        
+
   - Authorized JavaScript Origins:
-  
-  		http://localhost:3000
+
+        http://localhost:3000
 
 ### application.yml
 
