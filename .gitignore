@@ -14,6 +14,8 @@
 /log/*.log
 /tmp
 custom_plan.rb
+# Ignore RubyMine config directory
+.idea
 zeus.json
 # Ignore application configuration
 /config/application.yml
