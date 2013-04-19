@@ -12,7 +12,7 @@
             - @posts.each do |post|
               %div.wrapper
                 %div.header
-                  = link_to post.title, post_path(post, :only_path => false)
+                  = link_to post.title, post_url(post)
                   by #{post.user.full_name}
                 %div
                   = sanitize post.body
