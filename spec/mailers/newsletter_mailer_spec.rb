@@ -33,6 +33,10 @@ describe NewsletterMailer do
   end
 
   it 'should include klarna logo' do
-    mail.body.should have_xpath("//img[contains(@src,'klarna_blue_logo.png')]")
+    mail.body.should have_selector('img[src="https://cdn.klarna.com/public/images/SE/logos/v1/basic/SE_basic_logo_std_blue-black.png?width=180&height=48"]')
+  end
+
+  it 'should have width and height attributes on klarna logo' do
+    mail.body.should have_selector('img[width="180"][height="48"]')
   end
 end
