@@ -168,4 +168,16 @@ describe User do
     end
   end
 
+  describe "#active_posts" do
+    context 'given a user with 1 active and 1 archived post' do
+      let(:user) { create(:user) }
+      let(:posts) { create_list(:post, 2, user: user) }
+      before { posts.first.update_attribute(:archived, true) }
+
+      it "returns only the active post" do
+        expect(user.active_posts).to eq(posts.select { |post| !post.archived? })
+      end
+    end
+  end
+
 end
