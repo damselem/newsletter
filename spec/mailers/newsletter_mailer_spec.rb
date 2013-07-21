@@ -8,11 +8,11 @@ describe NewsletterMailer do
     let(:posts) { create_list(:post, 2) }
 
     it 'sends to all the users' do
-      mail.to.should =~ User.pluck(:email)
+      expect(mail.to).to match_array(User.pluck(:email))
     end
 
-    it "should include two posts" do
-      mail.body.should have_selector('div.wrapper', count: 2)
+    it "includes two posts" do
+      expect(mail.body).to have_selector('div.wrapper', count: 2)
     end
   end
 
@@ -20,23 +20,23 @@ describe NewsletterMailer do
     let(:expected_post) { posts.first }
 
     it 'includes link to post' do
-      mail.body.should have_selector("div.wrapper div.header a[href='#{post_url(expected_post)}']", text: expected_post.title)
+      expect(mail.body).to have_selector("a[href='#{post_url(expected_post)}']", text: expected_post.title)
     end
 
     it "includes author's name" do
-      mail.body.should have_selector('div.wrapper div.header', text: expected_post.user.full_name)
+      expect(mail.body).to have_selector('div.header', text: expected_post.user.full_name)
     end
 
     it "includes post body" do
-      mail.body.should have_selector('div.wrapper div', text: expected_post.body)
+      expect(mail.body).to have_selector('div', text: expected_post.body)
     end
   end
 
-  it 'should include klarna logo' do
-    mail.body.should have_selector('img[src="https://cdn.klarna.com/public/images/SE/logos/v1/basic/SE_basic_logo_std_blue-black.png?width=180&height=48"]')
+  it 'includes klarna logo' do
+    expect(mail.body).to have_selector('img[src="https://cdn.klarna.com/public/images/SE/logos/v1/basic/SE_basic_logo_std_blue-black.png?width=180&height=48"]')
   end
 
-  it 'should have width and height attributes on klarna logo' do
-    mail.body.should have_selector('img[width="180"][height="48"]')
+  it 'has width and height attributes on klarna logo' do
+    expect(mail.body).to have_selector('img[width="180"][height="48"]')
   end
 end
