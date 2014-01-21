@@ -1,0 +1,21 @@
+box: wercker/rvm
+services:
+  - wercker/postgresql
+build:
+  steps:
+    - rvm-use:
+        version: 2.0.0-p353
+
+    - bundle-install
+
+    - rails-database-yml:
+        service: postgresql
+
+    - script:
+        name: Set up db
+        code: bundle exec rake db:schema:load RAILS_ENV=test
+
+    - script:
+        name: rspec
+        code: bundle exec rspec
+
