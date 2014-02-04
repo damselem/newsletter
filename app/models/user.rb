@@ -2,6 +2,7 @@ require 'digest/md5'
 
 class User < ActiveRecord::Base
   has_many :posts
+  has_many :active_posts, class_name: 'Post', conditions: {archived: false}
 
   validates :uid,   :uniqueness => { :scope => :provider }
   validates :email, :uniqueness => true

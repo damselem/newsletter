@@ -3,6 +3,10 @@ require 'spec_helper'
 describe User do
   include OauthFaker
 
+  let(:user) { create(:user) }
+  let(:active_post) { create(:post, user: user) }
+  let(:archived_post) { create(:post, user: user, archived: true) }
+
   it { should respond_to(:uid) }
   it { should respond_to(:provider) }
   it { should respond_to(:first_name) }
@@ -160,10 +164,19 @@ describe User do
 
   describe '#gravatar_image_url' do
     context 'given a user with an email' do
-      let(:user) { create(:user) }
 
       it 'returns a gravatar-like url' do
         expect(user.gravatar_image_url).to match(/gravatar.com/)
+      end
+    end
+  end
+
+  describe "#active_posts" do
+    context 'given a user with 1 active and 1 archived post' do
+      let(:posts) { [active_post, archived_post] }
+
+      it "returns only the active post" do
+        expect(user.active_posts).to eq(posts.reject(&:archived?))
       end
     end
   end
